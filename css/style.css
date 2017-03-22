@@ -4,6 +4,13 @@ html {
   flex-direction: column;   /* For sticky footer */
 }
 
+body {
+  background-color: white;
+  color: black;
+  flex: 1;    /* For sticky footer */
+  font-size: 20px;
+}
+
 header {
   background-color: #45adff;  /* Light blue color */
   height: 50%;
@@ -12,11 +19,12 @@ header {
   position: fixed;
 }
 
-body {
-  background-color: white;
-  color: black;
-  flex: 1;    /* For sticky footer */
-  font-size: 20px;
+main {
+  background-color: red;  /* Light red color */
+  height: 200%;
+  width: 100%;
+  overflow: hidden;
+  position: fixed;
 }
 
 @media (max-width: 991px) { body { font-size: 18px; }}

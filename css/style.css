@@ -13,18 +13,16 @@ body {
 
 header {
   background-color: #45adff;  /* Light blue color */
-  height: 50%;
+  height:100vh;
+  min-height:100vh;
   width: 100%;
-  overflow: hidden;
-  position: fixed;
 }
 
 main {
-  background-color: red;  /* Light red color */
-  height: 200%;
+  height:100vh;
+  min-height:100vh;
   width: 100%;
-  overflow: hidden;
-  position: fixed;
+  background-color: red;
 }
 
 @media (max-width: 991px) { body { font-size: 18px; }}

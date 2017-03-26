@@ -70,23 +70,33 @@ header div {
 #projects li {
   display: inline-block;
   margin: 5px;
+  margin-top: 20px;
+  -webkit-user-select: none;  /* Chrome all / Safari all */
+  -moz-user-select: none;     /* Firefox all */
+  -ms-user-select: none;      /* IE 10+ */
+  user-select: none;          /* Likely future */
 }
 #projects li div {  /* Image */
-  height: 150px;
+  height: 300px;
+  max-height: 10vw;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  padding-bottom: 5px;
 }
-#projects li div, #projects li b, #projects li p { width: 250px; overflow: hidden; white-space: normal; }
-#projects b {  }
+#projects li div, #projects li b, #projects li p { width: 400px; max-width: 18vw; overflow: hidden; white-space: normal; }
+#projects .title {  margin: 0; font-size: 1em; }
+#projects p { font-size: 0.8em; }
+#projects a { color: #676767; transition: all 0.4s; }
+#projects a:hover { color: #40b0c7; transition: all 0.4s; }
 
 #about {
-  background-color: dimgrey;
+  background-color: #676767;
   height: 80vh;
 }
 
 @media (max-width: 991px) { body { font-size: 18px; }}
-@media (max-width: 750px) { body { font-size: 16px; }}
+/*@media (max-width: 750px) { body { font-size: 16px; }}*/
 
 footer {
 	min-height: 5px;

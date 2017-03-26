@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono');
 
-p { font-family: 'Roboto', sans-serif; }
+p, b { font-family: 'Roboto', sans-serif; }
 h1 { font-family: 'Roboto Mono', monospace; }
 
 html {
@@ -25,6 +25,10 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   color: white;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 header:before {
@@ -39,26 +43,49 @@ header:before {
   display: block;
   background-color: rgba(60, 135, 156, 0.65);
 }
-header div {
-  position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, 6em);
-}
-
-header * {  /* Header children */
-  max-width: 700px;
-  padding-left: 20px;
-  padding-right: 20px;
-}
-header h1 { font-size: 1.8em; }
+header h1 { font-size: 1.8em; margin-top: 0; margin-bottom: 10px;  }
 header p { font-size: 1.1em; }
+header button {
+  background-color: transparent;
+  border: none;
+  padding-top: 20px;
+}
+header button:focus { outline: 0; }
+header div {
+  margin-left: 20px;
+  margin-right: 20px;
+  max-width: 500px;
+  position: absolute;
+  top: 45%;
+  transform: translateY(-50%);
+}
 
-main {
-  height:100vh;
-  min-height:100vh;
+#projects {
   width: 100%;
-  background-color: red;
+  background-color: white;
+  overflow-x: auto;
+	white-space: nowrap;
+}
+#projects th, #projects td {
+	padding: .5em 1em;
+}
+#projects ul { padding: 0; margin: 0; }
+#projects li {
+  display: inline-block;
+  margin: 5px;
+}
+#projects li div {  /* Image */
+  height: 150px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#projects li div, #projects li b, #projects li p { width: 250px; overflow: hidden; white-space: normal; }
+#projects b {  }
+
+#about {
+  background-color: dimgrey;
+  height: 80vh;
 }
 
 @media (max-width: 991px) { body { font-size: 18px; }}
@@ -75,21 +102,14 @@ footer {
   overflow: hidden;
 }
 
-.arrow {
-  background-color: transparent;
-  border: none;
-  -webkit-transform: rotate(-90deg); /* Safari */
-  -moz-transform: rotate(-90deg); /* Firefox */
-  -ms-transform: rotate(-90deg); /* Firefox */
-  -o-transform: rotate(-90deg); /* Opera */
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3); /* Internet Explorer */
-  margin-top: 3em;
+.arrow-down {
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+
+  border-top: 20px solid #f00;
 }
-.arrow::before {
-  content: "❬";
-  font-size: 8em;
-}
-.arrow:focus { outline:0; }
 
 #hideAll    /* For hiding page until fully loaded */
  {

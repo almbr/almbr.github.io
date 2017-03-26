@@ -26,20 +26,83 @@
     <!-- If js is avalibile, delay page show -->
     <script type="text/javascript">document.getElementById("hideAll").style.display = "block";</script>
 
-    <header class="text-center" id="header">
-      <div style="padding-top:20px;">
+    <header id="header">
+      <div>
         <h1>Erik Almbratt</h1>
         <p>
           I'm an industry technical student doing coding, web development and electronics for fun!
           <br><br>
           Check out my projects below!
         </p>
-        <button class="arrow" onclick="move()"></button>      <script> function move() { location.href = "#main"; } </script>
+        <button id="headerbutton">  <!-- Arrow -->
+          <svg width="19.746332mm" height="7.2919421mm" style="fill:none;fill-rule:evenodd;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">
+            <g transform="translate(-229.47432,-576.34808)">
+              <path d="M 265,600 230,575"/>
+              <path d="m 264,600 34,-25"/>
+            </g>
+          </svg>
+        </button>
       </div>
     </header>
-    <main id="main">
-      <p>Hello world</p>
-    </main>
+    <div class="container" id="projects">
+      <ul>
+        <a href="test.html"><li>
+          <div style="background-image: url(img/temp_monitor.jpg);"></div>
+          <b>Temp monitor</b>
+          <p>An external device used to monitor a computer's system resources.</p>
+        </li></a>
+        <a href="test.html"><li>
+          <div style="background-image: url(img/temp_monitor.jpg);"></div>
+          <b>Temp monitor</b>
+          <p>An external device used to monitor a computer's system resources.</p>
+        </li></a>
+        <a href="test.html"><li>
+          <div style="background-image: url(img/temp_monitor.jpg);"></div>
+          <b>Temp monitor</b>
+          <p>An external device used to monitor a computer's system resources.</p>
+        </li></a>
+        <a href="test.html"><li>
+          <div style="background-image: url(img/temp_monitor.jpg);"></div>
+          <b>Temp monitor</b>
+          <p>An external device used to monitor a computer's system resources.</p>
+        </li></a>
+        <a href="test.html"><li>
+          <div style="background-image: url(img/temp_monitor.jpg);"></div>
+          <b>Temp monitor</b>
+          <p>An external device used to monitor a computer's system resources.</p>
+        </li></a>
+        <a href="test.html"><li>
+          <div style="background-image: url(img/temp_monitor.jpg);"></div>
+          <b>Temp monitor</b>
+          <p>An external device used to monitor a computer's system resources.</p>
+        </li></a>
+        <a href="test.html"><li>
+          <div style="background-image: url(img/temp_monitor.jpg);"></div>
+          <b>Temp monitor</b>
+          <p>An external device used to monitor a computer's system resources.</p>
+        </li></a>
+        <a href="test.html"><li>
+          <div style="background-image: url(img/temp_monitor.jpg);"></div>
+          <b>Temp monitor</b>
+          <p>An external device used to monitor a computer's system resources.</p>
+        </li></a>
+        <a href="test.html"><li>
+          <div style="background-image: url(img/temp_monitor.jpg);"></div>
+          <b>Temp monitor</b>
+          <p>An external device used to monitor a computer's system resources.</p>
+        </li></a>
+        <!-- Article template
+        <a><li>
+          <div style="background-image: url(img/temp_monitor.jpg);"></div>
+          <title></title>
+          <p></p>
+        </li></a>-->
+      </ul>
+    </div>
+
+    <div id="about">
+      
+    </div>
   </body>
 
   <footer>
@@ -47,12 +110,23 @@
   </footer>
 </html>
 
-<!-- Show content after delay -->
-<script>
-  window.onload = function()
-    { document.getElementById("hideAll").style.display = "none"; }
-</script>
 
 <!-- Import Bootstrap and JQuery js -->
 <script src="/js/jquery-3.1.0.js"></script>
 <script src="/js/bootstrap.min.js"></script>
+
+<!-- Custom script -->
+<script>
+  window.onload = function()
+    { document.getElementById("hideAll").style.display = "none"; }
+
+  function moveto(element) {  // Animated autoscroll to parameter element
+    $('html, body').animate({
+      scrollTop: $(element).offset().top
+    }, 1000);
+  }
+
+  $("#headerbutton").click(function() {
+    moveto("#projects");
+  });
+</script>

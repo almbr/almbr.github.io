@@ -18,95 +18,72 @@
 
     <!-- Import custom css -->
     <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Import Google font -->
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lato:100,400,300,300italic,700normal,700italic,700,400italic"/>
+
   </head>
 
   <body>
     <div style="display: none" id="hideAll"></div>
 
-    <!-- If js is avalibile, delay page show -->
-    <script type="text/javascript">document.getElementById("hideAll").style.display = "block";</script>
-
+    <!-- Page header. Includes image and textheader. -->
     <header id="header">
-      <div>
-        <h1>Erik Almbratt</h1>
-        <p>
-          I'm an industry technical student doing coding, web development and electronics for fun!
-          <br><br>
-          Check out my projects below!
-        </p>
-        <button id="headerbutton">  <!-- Arrow -->
-          <svg width="19.746332mm" height="7.2919421mm" style="fill:none;fill-rule:evenodd;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">
-            <g transform="translate(-229.47432,-576.34808)">
-              <path d="M 265,600 230,575"/>
-              <path d="m 264,600 34,-25"/>
-            </g>
-          </svg>
-        </button>
-      </div>
+      <span id=header_center>
+        <div>
+          <p>
+            Erik Almbratt<span style="font-weight: 200;">'s
+            <br>
+            project documentation</span>
+          </p>
+        </div>
+        <ul>
+          <a href="mailto:erik.almbratt@gmail.com" target="_blank"><li><i class="fa fa-envelope-o" aria-hidden="true"></i></li></a>
+          <a href="https://github.com/tsuum" target="_blank"><li><i class="fa fa-github" aria-hidden="true"></i></li></a>
+        </ul>
+      </span>
     </header>
+
+    <div id="banner">
+      <div class="container text-center">
+        <p>
+          This is where I, Erik, document my projects for others to see what I have made.
+          <br>
+          If you have any questions, feel free to contact me.
+        </p>
+      </div>
+    </div>
+
     <div class="container" id="projects">
-      <ul>
-        <a href="test.html"><li>
-          <div style="background-image: url('/img/tempmonitor.jpg');"></div>
-          <p class="title">Temp monitor</p>
+      <div class="row">
+        <div style="background-image: url('/img/tempmonitor.jpg');" class="col-md-4 col-xs-12"></div>
+        <span class="col-md-6 col-xs-12">
+          <h2>Temp monitor</h2>
           <p>An external device used to monitor a computer's system resources.</p>
-        </li></a>
-        <a href="test.html"><li>
-          <div style="background-image: url('/img/tempmonitor.jpg');"></div>
-          <p class="title">Temp monitor</p>
+        </span>
+      </div>
+
+      <div class="row">
+        <div style="background-image: url('/img/tempmonitor.jpg');" class="col-md-4 col-xs-12"></div>
+        <span class="col-md-6 col-xs-12">
+          <h2>Temp monitor</h2>
           <p>An external device used to monitor a computer's system resources.</p>
-        </li></a>
-        <a href="test.html"><li>
-          <div style="background-image: url('/img/tempmonitor.jpg');"></div>
-          <p class="title">Temp monitor</p>
+        </span>
+      </div>
+
+      <div class="row">
+        <div style="background-image: url('/img/tempmonitor.jpg');" class="col-md-4 col-xs-12"></div>
+        <span class="col-md-6 col-xs-12">
+          <h2>Temp monitor</h2>
           <p>An external device used to monitor a computer's system resources.</p>
-        </li></a>
-        <a href="test.html"><li>
-          <div style="background-image: url('/img/tempmonitor.jpg');"></div>
-          <p class="title">Temp monitor</p>
-          <p>An external device used to monitor a computer's system resources.</p>
-        </li></a>
-        <a href="test.html"><li>
-          <div style="background-image: url('/img/tempmonitor.jpg');"></div>
-          <p class="title">Temp monitor</p>
-          <p>An external device used to monitor a computer's system resources.</p>
-        </li></a>
-        <a href="test.html"><li>
-          <div style="background-image: url('/img/tempmonitor.jpg');"></div>
-          <p class="title">Temp monitor</p>
-          <p>An external device used to monitor a computer's system resources.</p>
-        </li></a>
-        <a href="test.html"><li>
-          <div style="background-image: url('/img/tempmonitor.jpg');"></div>
-          <p class="title">Temp monitor</p>
-          <p>An external device used to monitor a computer's system resources.</p>
-        </li></a>
-        <a href="test.html"><li>
-          <div style="background-image: url('/img/tempmonitor.jpg');"></div>
-          <p class="title">Temp monitor</p>
-          <p>An external device used to monitor a computer's system resources.</p>
-        </li></a>
-        <a href="test.html"><li>
-          <div style="background-image: url('/img/tempmonitor.jpg');"></div>
-          <p class="title">Temp monitor</p>
-          <p>An external device used to monitor a computer's system resources.</p>
-        </li></a>
-        <!-- Article template
-        <a><li>
-          <div style="background-image: url(img/temp_monitor.jpg);"></div>
-          <p class="title"></p>
-          <p></p>
-        </li></a>-->
-      </ul>
+        </span>
+      </div>
     </div>
 
-    <div id="about">
-
-    </div>
   </body>
 
   <footer>
-    <p>Hejdå</p>
+    <p>El Psy Congroo</p>
   </footer>
 </html>
 
@@ -115,18 +92,5 @@
 <script src="/js/jquery-3.1.0.js"></script>
 <script src="/js/bootstrap.min.js"></script>
 
-<!-- Custom script -->
-<script>
-  window.onload = function()
-    { document.getElementById("hideAll").style.display = "none"; }
-
-  function moveto(element) {  // Animated autoscroll to parameter element
-    $('html, body').animate({
-      scrollTop: $(element).offset().top
-    }, 1000);
-  }
-
-  $("#headerbutton").click(function() {
-    moveto("#projects");
-  });
-</script>
+<!-- Import Font Awesome by Dave Gandy - http://fontawesome.io -->
+<script src="https://use.fontawesome.com/3d819bd394.js"></script>

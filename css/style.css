@@ -1,96 +1,66 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono');
 
 p { font-family: 'Lato', sans-serif; }
-h1 { font-family: 'Roboto Mono', monospace; }
-h2 { font-family: 'Lato', sans-serif; }
+h1 { font-family: 'Lato', sans-serif; font-weight: 500; font-size: 1.5em; }
+h2 { font-family: 'Lato', sans-serif; font-weight: 300; font-size: 1.5em; }
+h3 { font-family: 'Lato', sans-serif; font-weight: 300; font-size: 1.3em; }
+h4 { font-family: 'Lato', sans-serif; font-weight: 600; font-size: 1.1em; }
+a { text-decoration: underline; color: inherit; transition: all 0.2s; }
+a:hover { cursor: pointer; color: #757575; }
+
+/* Content width */
+@media (min-width: 1170px) { }  /* Desktops */
+@media (min-width: 970px) { }  /* Laptops */
+@media (min-width: 750px) { }  /* Tablets */
+/* Phones */
+
+header, main, footer {
+  width: 550px;
+  max-width: 90%;
+  margin: auto;   /* Center */
+  display: block;   /* Center */
+}
 
 html {
-  height: 100%;   /* For sticky footer */
-  display: flex;    /* For sticky footer */
-  flex-direction: column;   /* For sticky footer */
+  min-height: 100%; /* Make sure it is at least as tall as the viewport */
+  position: relative;
+  font-family: 'open sans', sans-serif;
+  background-color: #f7f7f7;
+  font-size: 18px;
 }
 
 body {
-  background-color: white;
-  color: black;
-  flex: 1;    /* For sticky footer */
-  font-size: 20px;
+  height: 100%; /* Force the BODY element to match the height of the HTML element */
 }
 
-@media (max-width: 991px) { body { font-size: 18px; }}
-/*@media (max-width: 750px) { body { font-size: 16px; }}*/
+#height-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
 
 header {
-  min-height: 50vh;
-  width: 100%;
-  position: relative;
-  background-image: url("/img/alvstranden.jpg");
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  color: white;
-}
-
-header p { font-size: 1.2em; margin: 0; white-space: nowrap; }
-
-header > span {     /* Direct child*/
-  position: absolute;
-  top: 25%;
-  left: 50%;
-  transform: translateX(-50%);
-}
-header div {
-  box-sizing: content-box;
-  max-width: 95vw 350px;
-  min-width: 25vw;
-  background-color: #40b0c7;
-  opacity: 0.9;
-  padding: 1.5em;
-}
-header ul {
-  margin: 0;
-  margin-top: 0.8em;
-  padding: 0;
-  text-align: center;
-  font-size: 1.5em;
-}
-header li { display: inline; margin: 0.4em; }
-header ul a { color: white; transition: all 0.2s; }
-header ul a:hover { color: #40b0c7; }
-header ul a:focus { color: #40b0c7; }
-
-#banner {
-  background-color: grey;
-  color: white;
-  font-size: 0.8em;
   padding-top: 30px;
-  padding-bottom: 30px;
-  line-height: 2em;
+  padding-bottom: 10px;
 }
 
-#projects {
-  max-width: 1000px;
+header ul {
+  list-style: none;
+  padding: 0;
 }
-#projects div {   /* Project image */
-  height: 200px;
-  margin: 0;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding-bottom: 5px;
+header li {
+  display: inline;
+  font-size: 2em;
+  margin-right: 10px;
 }
-#projects .row {
-  margin-top: 60px;
-  margin-bottom: 60px;
-}
+main { text-align: center; }
+main h2, .item { text-align: left; }
+.item { width: 250px; display: inline-block; margin-right: 5px; margin-bottom: 15px; text-decoration: none; }
+.item div { width: 100%; background-color: white; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); }
+.item h4 { padding: 7px; padding-top: 4px; margin: 0; color: #383434; }
+.item img { width: 100%; }
+.item:hover { box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4); }
 
-footer {
-	min-height: 5px;
-  margin: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;;
-  background-color: #40b0c7;
-	color: white;
-  overflow: hidden;
-}
+footer { padding-top: 40px; padding-bottom: 10px; font-size: 0.8em; font-style: italic; }

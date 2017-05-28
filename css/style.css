@@ -9,9 +9,9 @@ a { text-decoration: underline; color: inherit; transition: all 0.2s; }
 a:hover { cursor: pointer; color: #757575; }
 
 /* Content width */
-@media (min-width: 1170px) { }  /* Desktops */
-@media (min-width: 970px) { }  /* Laptops */
-@media (min-width: 750px) { }  /* Tablets */
+@media screen and (min-width: 1170px) { }  /* Desktops */
+@media screen and (min-width: 970px) { }  /* Laptops */
+@media screen and (min-width: 750px) { }  /* Tablets */
 /* Phones */
 
 header, main, footer {
@@ -57,10 +57,11 @@ header li {
 }
 main { text-align: center; display: block; overflow: auto; }
 main h2, .item { text-align: left; }
-.item { width: 250px; display: inline-block; margin: 5px; margin-bottom: 15px; text-decoration: none; float: left; }
+.item { width: calc(100% - 10px); display: inline-block; margin: 5px; margin-bottom: 15px; text-decoration: none; float: left; }
+@media screen and (min-width: 750px) { .item { width: calc(50% - 10px); } }  /* Tablets size */
 .item div { width: 100%; background-color: white; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); }
 .item h4 { padding: 7px; padding-top: 4px; margin: 0; color: #383434; }
-.item img { width: 100%; }
+.item span { width: 100%; padding-top: 56.5%; display: block; background-position: center; background-repeat: no-repeat; background-size: cover; }  /* 56.5% = 19:9 */
 .item:hover { box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4); }
 
 footer { padding-top: 40px; padding-bottom: 10px; font-size: 0.8em; font-style: italic; }

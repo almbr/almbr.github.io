@@ -57,7 +57,7 @@ header li {
 }
 main { text-align: center; display: block; overflow: auto; }
 main h2, .item { text-align: left; }
-.item { width: 250px; display: inline-block; margin-right: 5px; margin-bottom: 15px; text-decoration: none; float:left; }
+.item { width: 250px; display: inline-block; margin-right: 5px; margin-bottom: 15px; text-decoration: none; float: left; }
 .item div { width: 100%; background-color: white; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); }
 .item h4 { padding: 7px; padding-top: 4px; margin: 0; color: #383434; }
 .item img { width: 100%; }
